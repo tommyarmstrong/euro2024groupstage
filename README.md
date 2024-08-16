@@ -20,7 +20,7 @@ This Python project combines all the group stage results for the EURO 2024 tourn
 
     ```bash
     git clone https://github.com/tommyarmstrong/euro2024groupstage.git
-    cd euro2024-results-combiner
+    cd euro2024groupstage
     ```
 
 2. **Install the required Python libraries:**
@@ -38,13 +38,13 @@ This Python project combines all the group stage results for the EURO 2024 tourn
 
 ## Usage 
 
-Execute the python script `combine_groups.py`
+Execute the Python script `combine_groups.py` using:
 
   ```bash
   python combine_groups.py
   ```
 
-This will create an HTML file in the same directory called `combined_groups.html` which contains group stage results for the EURO 2024 tournament combined into a single table. 
+This will create an HTML file in the same directory called `combined_groups.html` which contains group stage results for the EURO 2024 tournament combined into a single table.
 
 ## Contributing
 
