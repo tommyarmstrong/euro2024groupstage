@@ -71,6 +71,6 @@ html = f"""
 """
 
 # Write HTML to file
-text_file = open('combined_groups.html', 'w')
+text_file = open('index.html', 'w')
 text_file.write(html)
 text_file.close()
