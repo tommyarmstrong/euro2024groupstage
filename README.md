@@ -19,7 +19,7 @@ This Python project combines all the group stage results for the EURO 2024 tourn
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/euro2024-results-combiner.git
+    git clone https://github.com/tommyarmstrong/euro2024groupstage.git
     cd euro2024-results-combiner
     ```
 
