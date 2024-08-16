@@ -31,12 +31,16 @@ table_html = all_teams.to_html(table_id='all-teams-table', classes=['display', '
 # You can enable or disable paging or enable y scrolling below
 html = f"""
 <html>
-  <header>
+  <head>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
     <style>
       body {{
         font-family: "Calibri", sans-serif;
         font-size: 12px;
+      }}
+      h1 {{
+        font-family: "Calibri", sans-serif;
+        text-align: center;
       }}
       table {{
         width: 80%;
@@ -56,8 +60,10 @@ html = f"""
         text-align: center;
       }}
     </style>
-  </header>
+    <title>Euro 2024 Combined Group Stage Table</title>
+  </head>
   <body>
+    <h1>Euro 2024 Combined Group Stage Table</h1>
     {table_html}
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
