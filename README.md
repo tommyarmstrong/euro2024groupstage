@@ -12,6 +12,8 @@ This Python project combines all the group stage results for the EURO 2024 tourn
 
 - Python 3.x
 - `pandas` library
+- `lxml` library
+- `bs4` library
 - Basic knowledge of HTML and JavaScript for jQuery DataTables integration
 
 ## Installation
@@ -28,6 +30,7 @@ This Python project combines all the group stage results for the EURO 2024 tourn
     ```bash
     pip install pandas
     pip install lxml
+    pip install bs4
     ```
 
     or deploy from the `requirements.txt` file 
@@ -64,4 +67,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 - jQuery DataTables for providing an easy-to-use table plugin.
 - The Python pandas library for handling data manipulation.
+- The Beautiful Soup library for manipulating the HTML.
 - BBC website for providing the group data: www.bbc.co.uk/sport/football/european-championship/table
