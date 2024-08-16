@@ -28,316 +28,322 @@
         border: 1px solid #ccc;
         text-align: center;
       }
+      /* CSS for hiding columns on mobile */
+      @media only screen and (max-width: 768px) {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
     </style>
     <title>Euro 2024 Combined Group Stage Table</title>
   </head>
   <body>
     <h1>Euro 2024 Combined Group Stage Table</h1>
     <table border="1" class="dataframe display nowrap" id="all-teams-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Team</th>
-      <th>Played</th>
-      <th>Won</th>
-      <th>Drawn</th>
-      <th>Lost</th>
-      <th>GF</th>
-      <th>GA</th>
-      <th>GD</th>
-      <th>Points</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>Spain</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>5</td>
-      <td>0</td>
-      <td>5</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Germany</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>0</td>
-      <td>8</td>
-      <td>2</td>
-      <td>6</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Austria</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>6</td>
-      <td>4</td>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Portugal</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>5</td>
-      <td>3</td>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Turkey</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>5</td>
-      <td>5</td>
-      <td>0</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Switzerland</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
-      <td>0</td>
-      <td>5</td>
-      <td>3</td>
-      <td>2</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>England</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>France</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Romania</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Belgium</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Netherlands</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-      <td>4</td>
-      <td>0</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Georgia</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-      <td>4</td>
-      <td>0</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Italy</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Slovakia</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Ukraine</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>4</td>
-      <td>-2</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Denmark</td>
-      <td>3</td>
-      <td>0</td>
-      <td>3</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2</td>
-      <td>0</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Slovenia</td>
-      <td>3</td>
-      <td>0</td>
-      <td>3</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2</td>
-      <td>0</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Hungary</td>
-      <td>3</td>
-      <td>1</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2</td>
-      <td>5</td>
-      <td>-3</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Serbia</td>
-      <td>3</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>Croatia</td>
-      <td>3</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-      <td>3</td>
-      <td>6</td>
-      <td>-3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Albania</td>
-      <td>3</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>5</td>
-      <td>-2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Czech Republic</td>
-      <td>3</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>5</td>
-      <td>-2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>Poland</td>
-      <td>3</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>6</td>
-      <td>-3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>Scotland</td>
-      <td>3</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>7</td>
-      <td>-5</td>
-      <td>1</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Team</th>
+<th class="hide-on-mobile">Played</th>
+<th class="hide-on-mobile">Won</th>
+<th class="hide-on-mobile">Drawn</th>
+<th class="hide-on-mobile">Lost</th>
+<th class="hide-on-mobile">GF</th>
+<th class="hide-on-mobile">GA</th>
+<th>GD</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Spain</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">0</td>
+<td>5</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Germany</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">8</td>
+<td class="hide-on-mobile">2</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Austria</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">6</td>
+<td class="hide-on-mobile">4</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Portugal</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">3</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Turkey</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">5</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Switzerland</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>England</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">1</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>France</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">1</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Romania</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">4</td>
+<td class="hide-on-mobile">3</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Belgium</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">1</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Netherlands</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">4</td>
+<td class="hide-on-mobile">4</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Georgia</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">4</td>
+<td class="hide-on-mobile">4</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Italy</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">3</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Slovakia</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">3</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Ukraine</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">4</td>
+<td>-2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Denmark</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">2</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Slovenia</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">2</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Hungary</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">5</td>
+<td>-3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Serbia</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td>-1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Croatia</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">6</td>
+<td>-3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Albania</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">5</td>
+<td>-2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Czech Republic</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">5</td>
+<td>-2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Poland</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">6</td>
+<td>-3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Scotland</td>
+<td class="hide-on-mobile">3</td>
+<td class="hide-on-mobile">0</td>
+<td class="hide-on-mobile">1</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">2</td>
+<td class="hide-on-mobile">7</td>
+<td>-5</td>
+<td>1</td>
+</tr>
+</tbody>
 </table>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>

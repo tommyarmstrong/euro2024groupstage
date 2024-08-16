@@ -1,5 +1,6 @@
 # Libraries
 import pandas as pd
+from bs4 import BeautifulSoup
 
 # Scrape the tables data
 url = 'https://www.bbc.co.uk/sport/football/european-championship/table'
@@ -26,6 +27,46 @@ all_teams.columns = columns
 
 # Create table HTML
 table_html = all_teams.to_html(table_id='all-teams-table', classes=['display', 'nowrap'])
+
+# Manipulate the HTML using Beautiful Soup
+soup = BeautifulSoup(table_html, 'html.parser')
+
+# Find the index column (first <th> in each row) and replace <th> with <td>
+for row in soup.find_all('tr')[1:]:  # Exclude the top row
+  first_th = row.find('th')
+  if first_th:
+    first_td = soup.new_tag('td')
+    first_td.string = first_th.get_text()
+    first_th.replace_with(first_td)
+
+# Want to hide some of these columns on mobile devices
+# Get table headers
+table_headers = [th.get_text(strip=True) for th in soup.select('#all-teams-table thead th')]
+
+# Define the columns to hide
+columns_to_hide = ['Played', 'Won', 'Lost', 'Drawn', 'GF', 'GA']
+
+# Function to find the column index by header name
+def get_column_index(header_name):
+  if header_name in table_headers:
+    return table_headers.index(header_name)
+  return None
+
+# Add 'hide-on-mobile' class to the specified columns
+for th in soup.find_all('th'):
+  for col in columns_to_hide:
+    if col in th.contents:
+      th['class'] = th.get('class', []) + ['hide-on-mobile']
+    
+# Add class to all <td> elements in the column
+for row in soup.find_all('tr')[1:]:  # Skip the header row
+  tds = row.find_all('td')
+  for col in columns_to_hide:
+    col_index = table_headers.index(col)
+    tds[col_index]['class'] = tds[col_index].get('class', []) + ['hide-on-mobile']
+
+# Convert the modified BeautifulSoup object back to HTML
+table_html = str(soup)
 
 # Construct the complete HTML with jQuery Data tables
 # You can enable or disable paging or enable y scrolling below
@@ -58,6 +99,12 @@ html = f"""
         padding: 5px;
         border: 1px solid #ccc;
         text-align: center;
+      }}
+      /* CSS for hiding columns on mobile */
+      @media only screen and (max-width: 768px) {{
+        .hide-on-mobile {{
+          display: none;
+        }}
       }}
     </style>
     <title>Euro 2024 Combined Group Stage Table</title>
