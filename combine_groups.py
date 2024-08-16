@@ -74,6 +74,7 @@ html = f"""
 <html>
   <head>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {{
@@ -84,8 +85,13 @@ html = f"""
         font-family: "Calibri", sans-serif;
         text-align: center;
       }}
+      .table-container {{
+        max-width: 100%;
+        overflow-x: auto;
+      }}
       table {{
-        width: 80%;
+        font-size: 1em;
+        width: 100%;
         border-collapse: collapse;
         border: 1px solid #ccc;
 
@@ -95,14 +101,19 @@ html = f"""
         padding: 5px;
         border: 1px solid #ccc;
         text-align: center;
+        width: auto;
       }}
       td {{
         padding: 5px;
         border: 1px solid #ccc;
         text-align: center;
+        width: auto;
       }}
       /* CSS for hiding columns on mobile */
       @media only screen and (max-width: 768px) {{
+        th, td {{
+          padding: 6px; 
+        }}
         .hide-on-mobile {{
           display: none;
         }}
@@ -112,7 +123,9 @@ html = f"""
   </head>
   <body>
     <h1>Euro 2024 Combined Group Stage Table</h1>
-    {table_html}
+    <div class="table-container">
+      {table_html}
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script>
