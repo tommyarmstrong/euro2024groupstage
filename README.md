@@ -57,7 +57,7 @@ This will create an HTML file in the same directory called `combined_groups.html
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-##Acknowledgments
+## Acknowledgments
 - jQuery DataTables for providing an easy-to-use table plugin.
 - The Python pandas library for handling data manipulation.
 - BBC website for providing the group data: www.bbc.co.uk/sport/football/european-championship/table
