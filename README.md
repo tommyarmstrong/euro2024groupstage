@@ -44,7 +44,11 @@ Execute the Python script `combine_groups.py` using:
   python combine_groups.py
   ```
 
-This will create an HTML file in the same directory called `combined_groups.html` which contains group stage results for the EURO 2024 tournament combined into a single table.
+This will create an HTML file in the same directory called `index.html` which contains group stage results for the EURO 2024 tournament combined into a single table.
+
+## Viewing the HTML 
+
+The HTML table is available at https://tommyarmstrong.github.io/euro2024groupstage/
 
 ## Contributing
 
